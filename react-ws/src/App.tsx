@@ -17,6 +17,10 @@ function App() {
       console.log("Recieved message: ",message.data);
       setLatestMessage(message.data);
     }
+
+    return ()=>{
+      socket.close();
+    }
    
   },[])
 
